@@ -1,6 +1,8 @@
  
 #![no_std]      // No standard library is linked 
 #![no_main]     // disable all Rust-level entry points
+
+mod vga_buffer;
 use core::panic::PanicInfo;
 
 // a static variable that holds the string to be printed
