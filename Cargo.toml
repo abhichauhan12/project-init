@@ -2,5 +2,21 @@
 name = "basic_os"
 version = "0.1.0"
 edition = "2024"
+authors = ["Abhishek Chauhan <abhishekchauhan9586@gmail.com>"]
+
+
+[[bin]]
+name = "basic_os"
+test = false
+bench = false
+
+# the profile for `cargo build`
+[profile.dev]
+panic = "abort"  # disable stack unwinding on panic
+
+# the profile for `cargo build --release`
+[profile.release]
+panic = "abort"  # disable stack unwinding on panic
 
 [dependencies]
+bootloader = "0.9"
